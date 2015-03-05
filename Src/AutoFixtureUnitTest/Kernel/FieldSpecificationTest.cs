@@ -66,8 +66,8 @@ namespace Ploeh.AutoFixtureUnitTest.Kernel
 
         [Theory]
         [InlineData("Field", "Field", true)]
+        [InlineData("field", "Field", true)]
         [InlineData("someName", "Field", false)]
-        [InlineData("field", "Field", false)]
         public void IsSatisfiedByWithRequestForFieldShouldReturnCorrectResult(
             string fieldName,
             string requestedName,

@@ -95,7 +95,9 @@ namespace Ploeh.AutoFixture.Kernel
 
         private bool FieldHasTargetName(object request)
         {
-            return ((FieldInfo)request).Name == this.targetName;
+            return ((FieldInfo)request)
+                   .Name
+                   .Equals(this.targetName, StringComparison.OrdinalIgnoreCase);
         }
     }
 }

@@ -67,8 +67,8 @@ namespace Ploeh.AutoFixtureUnitTest.Kernel
 
         [Theory]
         [InlineData("parameter", "parameter", true)]
+        [InlineData("Parameter", "parameter", true)]
         [InlineData("someName", "parameter", false)]
-        [InlineData("Parameter", "parameter", false)]
         public void IsSatisfiedByWithRequestForParameterShouldReturnCorrectResult(
             string parameterName,
             string requestedName,

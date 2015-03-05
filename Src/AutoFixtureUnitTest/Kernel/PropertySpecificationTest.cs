@@ -66,8 +66,8 @@ namespace Ploeh.AutoFixtureUnitTest.Kernel
 
         [Theory]
         [InlineData("Property", "Property", true)]
+        [InlineData("property", "Property", true)]
         [InlineData("someName", "Property", false)]
-        [InlineData("property", "Property", false)]
         public void IsSatisfiedByWithRequestForPropertyShouldReturnCorrectResult(
             string propertyName,
             string requestedName,
